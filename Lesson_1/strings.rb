@@ -22,4 +22,45 @@ ex_text = "Hello \n World"
 
 puts ex_text
 
+# String Interpolation
+
+=begin 
+    You can embed any Ruby expression inside a double 
+    quote string using #{ }, just as you did with variable names. 
+    Ruby evaluates the placeholders and replaces them with values:
+=end
+
+a = 5 
+b = 2
+
+puts "The sum is #{a+b}"
+
+# Concatenation
+
+=begin
+    Strings can be joined using the + 
+    in a process called concatenation.
+    When concatenating strings, it doesn't matter whether they've 
+    been created with single or double quotes.
+=end 
+
+a = "Hi"
+b = ' there'
+
+puts a + b
+
+# Repeating a String
+
+=begin 
+    Strings can be repeated using the * and an integer value.
+    The order of the string and the integer does matter: 
+    the string has to come first.
+=end
+
+a = "abc"
+puts a * 3
+
+puts '45' * 4
+
+# Strings can't be multiplied by other strings.
 
