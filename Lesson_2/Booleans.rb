@@ -28,10 +28,58 @@
     when two operands are equal, and false when they are not:
 =end
 
-a = 5 
-b = 8 
+# a = 5 
+# b = 8 
 
-puts a == b 
+# puts a == b 
 
-puts a == 5 
+# puts a == 5 
 
+=begin
+    Another comparison operator, the not equal operator (!=), 
+    evaluates to true if the items being compared aren't equal, 
+    and false if they are.
+    For example:
+=end
+
+# a = 8
+# b = 7 
+
+# puts a != b 
+
+# What is the output of this code?
+
+# a = 7 
+# b = a/2
+
+# puts b == (a-4)
+
+
+# Comparison Operators
+
+=begin
+    Ruby also has operators that determine whether one value is 
+    greater than or less than another. 
+    These operators are > and < respectively. Similarly, 
+    the greater than or equal to, and less than or equal 
+    to operators are >= and <=.
+=end 
+
+# puts 12 > 8
+
+# puts 5 < 2 
+
+# puts 5 >= 5.0
+
+# puts 3 <= 6 
+
+
+=begin
+    There is also the .eql? method, which results in true 
+    only if both arguments have the same type and equal values.
+=end
+
+puts 3 == 3.0 
+
+puts 3.eql?(3.0)
+# 3.eql?(3.0) is false because 3 is an integer and 3.0 is a float.
