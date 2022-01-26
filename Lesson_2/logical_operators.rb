@@ -52,3 +52,30 @@ end
 puts "#################"
 
 
+
+
+# NOT
+
+=begin
+    The not (!) operator reverses the state of a single operand.
+    The result of not true is false, and not false is true.
+=end
+
+a = 7 
+puts !(a > 5)
+
+# Here, a > b evaluates to true and then the not operator reverses it to false.
+
+
+puts "-----------------"
+
+
+a = 5
+if !(a > 2)
+  print("2")
+elsif !(1 + 2 == a)
+  print("3")
+else
+  print("4")
+end
+
