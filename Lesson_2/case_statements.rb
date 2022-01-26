@@ -23,3 +23,27 @@ end
 
 # You can have as many when statements as you need for a single case.
 # Note that the case expression must be closed with the end keyword.
+
+puts "==================="
+
+
+# case Statements 
+
+=begin
+    Multiple values can be tested within a single when 
+    by separating the values with commas.
+    For example:
+=end
+
+
+age = 5 
+
+case age
+when 1, 2, 3
+    puts "Little baby"
+when 4, 5
+    puts "Child"
+end 
+
+
+
