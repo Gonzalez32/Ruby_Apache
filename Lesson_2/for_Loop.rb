@@ -82,3 +82,12 @@ loop do
     x += 1
     break if x > 10
 end
+
+# Will print the nums 0 to 10. When x > 10 evaluates to true, the loop will stop.
+
+# NOTE to remenber if we do not include a break condition, the loop will run FOREVER.
+
+
+puts "================="
+
+
