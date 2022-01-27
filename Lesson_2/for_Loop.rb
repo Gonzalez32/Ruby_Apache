@@ -91,3 +91,28 @@ end
 puts "================="
 
 
+# Quiz
+
+a = 2
+
+loop do
+  puts a
+  a += 3
+  break if a > 8
+end
+
+
+puts "++++++++++++++++++++"
+
+
+
+nums = 0
+
+for i in 2..4 
+    nums+=i
+end
+
+puts nums
+
+
+# last quiz didn't make sense at all, output is 5 but when you run it the output is 9! 
