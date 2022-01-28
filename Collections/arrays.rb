@@ -83,4 +83,19 @@ puts arr
 puts "#######################"
 
 
+# Quiz Adding Elements 
+
+a = [2, 6, 9]
+
+a << 3
+# 3 is being added at the end of the array.
+a[1] += a[0]
+# value 6 is being added with value 2, which = 8
+puts a[1]
+# On line 92 we solve the output is 8, since we are running the code the output is 8.
+
+
+puts "#######################"
+
+
 
