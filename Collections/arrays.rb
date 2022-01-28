@@ -98,4 +98,60 @@ puts a[1]
 puts "#######################"
 
 
+# REMOVING ELEMENTS
+
+=begin
+    Similarly, there are pop and delete_at methods available
+    to remove elements from the array.
+
+    The pop method removes the last element of the array.
+
+    For example:
+=end
+
+array = [1, 2, 3]
+
+array.pop
+
+print array
+
+# puts method output one element per line, while print actually outputs brackets and a list of items.
+
+
+puts "%%%%%%%%%%%%%%%%%%%%%%%%%"
+
+
+# You can use the delete_at method to specify the index of the elements to be removed:
+
+arr = [2, 4, 6, 8]
+
+arr.delete_at(2)
+
+print arr
+
+
+puts "%%%%%%%%%%%%%%%%%%%%%%%%%"
+
+# Array Ranges
+
+# You can even access a range within the array using the range operators:
+
+nums = [6, 3, 8, 7, 9]
+
+print nums[1..3]
+
+
+# Array Ranges Quiz
+nums = [4,7,5,2]
+
+nums.delete_at(1)
+# In nums array value 7 will be deleted.
+nums << 3
+# value 3 will be added at the end of the array.
+# nums = [4,5,2,3]
+x = nums[2..3]
+
+puts x[0]
+# output will be 2 since x = nums[2..3] and x[0] will be the first value in the array.
+
 
