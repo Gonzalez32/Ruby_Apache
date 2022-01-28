@@ -21,9 +21,66 @@ items = ["Apple", "Orange", "Banana"]
 
 puts items[0]
 
+puts "======================="
+
 # You can assign any array element a new value by using its index:
 
 # items[1] = "Kiwi"
+
+puts items
+
+
+puts "======================="
+
+# Arrays
+
+# An array can contain different types of elements:
+
+arr = [5, "Dave", 15.88, false]
+
+puts arr[0], arr[1], arr[-1]
+
+
+puts "======================="
+
+
+# To add new elements to the array, you can use the << operator.
+
+
+arr << 10
+
+puts arr
+
+
+puts "======================="
+
+
+=begin
+    This will add an element with the value 8 to the end of the array.
+    Alternatively, you can use the push and insert methods 
+    (we will learn more about methods in the coming module. 
+    For now, just remember that a method is code that performs an action).
+=end
+
+arr.push(3)
+
+puts arr
+
+
+puts "======================="
+
+
+# This will add 8 to the end of the array.
+
+# The insert method allows you to insert the element at the desired position:
+
+arr.insert(2, 8)
+
+puts arr
+
+# The code above will insert an element with value 8 at the position with index 2.
+
+puts "#######################"
 
 
 
