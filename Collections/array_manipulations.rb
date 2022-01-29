@@ -31,3 +31,17 @@ print res
 =end
 
 
+puts "++++++++++++++++++"
+
+# combining Array
+
+a = [3,7,5]
+
+b = [1,3]
+
+res = a - b
+# res = [7,5]
+
+puts res[0]
+# This will output the first value: 7 in the res array.
+
