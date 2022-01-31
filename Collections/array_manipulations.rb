@@ -45,3 +45,19 @@ res = a - b
 puts res[0]
 # This will output the first value: 7 in the res array.
 
+
+puts "$$$$$$$$$$$$$"
+
+# Boolean Operations
+
+=begin
+    The & operator returns NEW array containing 
+    the elements common to the two array, 
+    with no duplicates.
+=end
+
+a = [2, 3, 7, 8]
+
+b = [2, 7, 9]
+
+print a & b
