@@ -82,3 +82,29 @@ y = [3,4,5]
 res = x | y
 
 puts res[3]
+
+
+puts "@@@@@@@@@@@@@@@"
+
+# Moving Elements
+
+# The reverse method returns a new array containing the original array elements in reverse order.
+
+arr = [5,3,8]
+
+res = arr.reverse
+
+print res
+
+puts "@@@@@@@@@@@@@@@"
+
+# You can also reverse the array in place using the reverse! method:
+
+arr = [1,2,3]
+
+print arr.reverse!
+
+=begin
+    If you use the reverse method without(!) and don't save it to a new
+    variable, it will just reverse it once and keep the original value.
+=end
