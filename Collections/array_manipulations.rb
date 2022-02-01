@@ -61,3 +61,24 @@ a = [2, 3, 7, 8]
 b = [2, 7, 9]
 
 print a & b
+
+
+puts '!!!!!!!!!!!!!!!!!!'
+
+# The | operator returns a new array by joinning the arrays and removing duplicates.
+
+a = [2,3,7,8]
+
+b = [2,7,9]
+
+print a | b   
+
+puts '!!!!!!!!!!!!!!!!!!'
+
+x = [1,2,3]
+
+y = [3,4,5]
+
+res = x | y
+
+puts res[3]
