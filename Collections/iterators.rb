@@ -34,3 +34,36 @@ arr.each do |x|
 end
 
 puts sum
+
+puts "!!!!!!!!!!!"
+
+# Iterators
+
+# The each iterator can also be used with hashes:
+
+sizes = {svag:800, hd:1366, uhd:3340}
+
+sizes.each do |key, value|
+    puts "key and value: #{key}=>#{value}"
+end
+
+=begin
+    In the example above, key and value are variables 
+    that get assigned to the corresponding values of the hash elements 
+    at each iteration. 
+    You can use any name for your variables.
+
+    The do and end keywords specify a block of code in Ruby.
+    After the opening of the block, we have the block parameters 
+    within pipes ( | | ).
+    Ruby provides a shorthand way of writing blocks: you can use curly 
+    braces to start and end code blocks.
+    So the above example can be written shorter as:
+=end
+
+sizes ={svga:800, hd:1399, udh:3890}
+
+sizes.each { |k, v| puts "#{k}=>#{v}" }
+
+# The each iterator can also be used on ranges.
+# For strings, you can use the each_char iterator to iterate over the characters.
