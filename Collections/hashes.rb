@@ -126,3 +126,44 @@ puts arr[1][2]
 
 # There can be multiple levels of nesting.
 
+puts "_____________"
+
+
+# Nested Hashes
+
+# Hashes can also be nested.
+
+cars = {
+    bmw: {
+        year:2023,
+        color:"BLUE"
+    },
+    mercedes: {
+        year:2020,
+        color:"BLACK"
+    },  
+    porsche: {
+        year:2021,
+        color:"WHITE"
+    }
+}
+
+puts cars[:bmw][:color]
+
+=begin
+    Hashes and arrays can have any level of nesting, 
+    but keep in mind that hashes and arrays with more than 
+    three dimensions are harder to manage.
+=end
+
+
+# Quiz
+# Nested Hashes
+
+test = {
+    a:"A",
+    b:{c:"C", d:"D"}
+}
+
+puts test.length
+# Here will output 2 because test.length is outputting A,C,D in array 0,1,2 which in result = 2
