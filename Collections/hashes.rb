@@ -107,3 +107,22 @@ res = h.keys
 # Here will output the keys which will be b and a.
 puts res[0]
 # This will output the first value in the index which is b!
+
+
+puts "$$$$$$$$$"
+
+
+# Nested Arrays 
+
+# Arrays can contain other arrays. These are called nested arrays.
+# For examples:
+
+arr = [ [1,2,3], [4,5,6] ]
+
+puts arr[1][2]
+# This will output 6
+
+# Array contains two arrays. So, arr[1][2] accesses the second array's third element, which is 6.
+
+# There can be multiple levels of nesting.
+
