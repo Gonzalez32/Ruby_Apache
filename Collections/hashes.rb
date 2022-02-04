@@ -67,3 +67,30 @@ puts h[:age]
 
 # In other programming languages hashes are called associative arrays or dictionaries.
 
+
+
+puts "!!!!!!!!!!!!!!"
+
+
+# HASHES
+
+=begin
+    There are useful methods available for manipulating hashes:
+    hash.delete(key) removes the key-value pair from hash by key.
+    hash.key(value) returns the key for the given value in hash, 
+    nil if no matching value is found.
+    hash.invert creates a new hash, reversing keys and values from hash; 
+    that is, in the new hash, the keys from hash become values and values become keys.
+    hash.keys returns a new array with keys from hash.
+    hash.values returns a new array containing all the values of hash.
+    hash.length returns the length of hash as an integer.
+
+    For example:
+=end
+
+car = {brand:"BMW", year:2026, color:"RED", length:206}
+
+car.delete(:length)
+
+puts car.values
+
