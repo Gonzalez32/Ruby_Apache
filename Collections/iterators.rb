@@ -67,3 +67,40 @@ sizes.each { |k, v| puts "#{k}=>#{v}" }
 
 # The each iterator can also be used on ranges.
 # For strings, you can use the each_char iterator to iterate over the characters.
+
+
+puts "----------------"
+
+# Quiz
+
+# Fill in the blanks to calculate the sum of all values in the hash.
+
+h = {a:8, b:9, c:18}
+
+sum = 0
+
+h.each { |key, val| sum += val }
+# Here within the pipes are key and val. 
+# sum which is 0 plus(+) the val-ue within the hash {8,9,18} = 35
+puts sum
+
+# There are also iterators availables for numbers.
+# The times iterator exeuctes a loop the specified number of times:
+
+10.times do
+    puts "Hi"
+end
+
+# The code above will print "Hi" 10 times......
+
+puts "(((((()))))"
+
+# Quiz
+
+x = 8
+x /= 2
+y = 1
+x.times {y+=2}
+# 4.times {y+=2} 
+# in this case y will added by 2 with x times (4 times) so 1+2 =3, 3+2=5, 5+2=7, 7+2 = 9
+puts y
