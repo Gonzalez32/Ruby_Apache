@@ -41,4 +41,29 @@ puts ages["Amy"]
 =end
 
 
+puts "++++++++++++++++"
+
+
+# HASHES & SYMBOLS
+
+# Uses of symbols includes using them as hashes keys.
+# For examples:
+
+h = {:name=>"Dave", :age=>28, :gender=>"male"}
+
+puts h[:age]
+
+
+puts "$$$$$$$$$$$$$$"
+
+
+# In the code above, symbols are used as keys for our hash.
+# A shorter way of writing the same code as above is the following:
+
+h = {name: "Dave", age:28, gender:"male"}
+
+puts h[:age]
+
+
+# In other programming languages hashes are called associative arrays or dictionaries.
 
