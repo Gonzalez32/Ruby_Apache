@@ -108,3 +108,39 @@ print arr.reverse!
     If you use the reverse method without(!) and don't save it to a new
     variable, it will just reverse it once and keep the original value.
 =end
+
+puts "@@@@@@@@@@@@@@@"
+
+# Array Methods 
+
+=begin
+    There are a number of other useful methods available for manipulating arrays.
+    Here are some of the most used ones:
+    array.length or array.size returns the number of elements in array.
+    array.sort returns a new array with the elements sorted
+    array.uniq returns a new array with duplicate values removed from array.
+    array.uniq! removes duplicates in place.
+    array.freeze safeguards the array, preventing it from being modified.
+    array.include?(obj) returns true if obj is present in array, false otherwise.
+    array.min returns the element with the minimum value.
+    array.max returns the element with the maximum value.
+
+    Most of the methods also work for strings, 
+    which can be thought of as arrays of characters.
+
+
+    A for loop is one way to iterate over an array of elements:
+=end
+
+arr = ["a", "b", "c"]
+
+for x in arr
+    puts "Value: #{x}"
+end
+
+# This will loop through all the elements of the array and output them one per line.
+
+# Ruby has a more elegant way of iterating over array elements.
+# You will learn about iterators in the coming lessons.
+
+
