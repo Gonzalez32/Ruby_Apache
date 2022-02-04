@@ -94,3 +94,16 @@ car.delete(:length)
 
 puts car.values
 
+
+puts "-----------"
+
+# quiz
+
+h = {a:'b', b:'a'}
+
+h = h.invert
+# Here will changes the K & V pairs with the hash.
+res = h.keys
+# Here will output the keys which will be b and a.
+puts res[0]
+# This will output the first value in the index which is b!
