@@ -144,3 +144,11 @@ end
 # You will learn about iterators in the coming lessons.
 
 
+# A - M 
+
+arr = ["a", "b", "a"]
+arr << "z"
+arr.uniq!
+puts arr.size
+# output is 3
+
