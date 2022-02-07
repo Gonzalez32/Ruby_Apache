@@ -326,4 +326,26 @@ sqr 4.times {puts "HI"}
     the entire chained call will break down.
 =end
 
+puts "==="
+
+# Methods as Arguments
+
+=begin
+    We can also pass methods as arguments to other methods. 
+    The returned values of those methods will be used as the 
+    actual values for the arguments, for example:
+=end
+
+def add a, b
+    a+b
+end
+
+def mult a, b
+    a*b
+end
+
+x = mult(add(2, 3), add(4, 7))
+puts x
+
+# We defined two methods, add and mult, and passed two calls to the add method as arguments to mult.
 
