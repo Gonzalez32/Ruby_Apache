@@ -183,3 +183,36 @@ end
 
 demo 5
 
+puts "======"
+
+# Optional Parameters
+
+# You can also define methods that take any number of arguments using the following syntax:
+
+def someMethods(*p)
+    puts p
+end
+
+someMethods(25, "Hello", true)
+
+=begin
+    Now you can pass any number of arguments to the method.
+    In the code above p is an array. When you pass arguments to the method, 
+    they become elements of p.
+
+    If you call the method without any arguments, 
+    the array p will be empty.
+=end
+
+    
+# This technique allows optional parameters for a method, for example:
+
+def myMethod(a, b, *c)
+    #some code
+end
+
+=begin
+    myMethod has two mandatory parameters and an optional one. 
+    Therefore, you can pass two or more arguments to the method.
+=end
+
