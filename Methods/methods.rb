@@ -300,3 +300,30 @@ puts demo 10, 11
     The method above will return the value 5. 
     The statement a=9 is ignored.  
 =end
+
+puts "----"
+
+# Chaining Methods
+
+=begin
+    Because all methods return a value, we can chain multiple 
+    methods together, as well as chain methods with iterators.
+    For example:
+=end
+
+def sqr x
+    x*x
+end
+
+sqr 4.times {puts "HI"}
+
+=begin
+    In the code above we chained our defined square method with the times iterator.
+    As square(4) will return 16, the loop will run and output "Hi" 16 times.
+
+
+    If anywhere along the chain there is a nil or an error, 
+    the entire chained call will break down.
+=end
+
+
