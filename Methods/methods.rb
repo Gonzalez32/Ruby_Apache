@@ -240,8 +240,8 @@ end
 x = sum 5, 23
 puts x
 
-y = sum 10, 10
-puts y 
+# y = sum 10, 10
+# puts y 
 
 z = sum 30, 39
 puts z
@@ -348,4 +348,34 @@ x = mult(add(2, 3), add(4, 7))
 puts x
 
 # We defined two methods, add and mult, and passed two calls to the add method as arguments to mult.
+
+
+puts "Variable Scope"
+
+# Variable Scope
+
+=begin
+    Scope defines where in a program a variable is accessible.
+    Ruby has four types of variable scope: local, global, instance and class.
+
+    Local variables are local to the code construct in which they are declared. 
+    For example, a local variable declared in a method or within a loop cannot
+    be accessed outside of that loop or method. Local variable names must begin with 
+    either an underscore or a lowercase letter.
+
+    For example:
+=end
+
+def calc x
+    yw = 2
+    puts x*yw
+end
+
+puts yw
+
+=begin
+    In the above code x and y are both local variables. 
+    They are accessible only inside the calc method.
+    If we try to access them outside of the method we will get an error:
+=end
 
