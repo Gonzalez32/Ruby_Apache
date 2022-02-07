@@ -130,3 +130,18 @@ sum(x)
     The default value only comes into play when no 
     value for that argument is provided.
 =end
+
+puts "---------"
+
+# Parameters
+
+=begin
+    You can also leave off the parenthese when using methods.
+    For example, sum(x,y) can be wirtten as sum x,y
+=end
+
+def sum x,y
+    puts x+y
+end
+
+sum 6,9
