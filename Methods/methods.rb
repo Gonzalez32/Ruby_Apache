@@ -57,3 +57,42 @@ sqr(8)
 # The actual parameter value is called an argument.
 # So, in the above example, x is the parameter of the method, while 8 is the argument.
 
+puts "#######"
+
+# Parameters
+
+def a(b)
+    puts b/2
+end 
+
+a(9)
+
+# print 9 / 2
+
+
+puts "!!!!!!"
+
+
+# Multiple Parameters
+
+# A method can include multiple parameters, separated by commas.
+
+def sum(a,b)
+    puts a+b
+end
+
+sum(10,10)
+
+sum(88, 164)
+
+# You can also pass variable arguments:
+
+def sum(a,b,c)
+    puts a+b+c
+end
+
+x = 2
+y = 42
+z = 6
+
+sum(x,y,z)
