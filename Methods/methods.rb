@@ -85,6 +85,10 @@ sum(10,10)
 
 sum(88, 164)
 
+
+puts "__________"
+
+
 # You can also pass variable arguments:
 
 def sum(a,b,c)
