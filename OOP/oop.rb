@@ -60,3 +60,36 @@ class Person
 end
 
 # The initialize method is known as the constructor in other object-oriented programming languages.
+
+
+# Objects
+
+=begin
+    After the class and the initialize methods are defined, 
+    we can create objects of that class by using the new method. 
+    The method new is predefined in the Ruby library and 
+    does not need to be added to your class definition.
+    Below is an example that creates two objects p1 and p2 of the class Person:
+=end
+
+class Person
+    def initialize
+        puts "Hi there"
+    end
+end
+
+p1 = Person.new
+p2 = Person.new
+
+=begin
+    Note the syntax for calling new: the class name followed by a dot and followed by the method name.
+    The code above outputs "Hi there" twice because we created two objects of the class, 
+    which each call the initialize method. Now, p1 and p2 are separate objects of the class Person.
+
+    Objects are also called instances of a class. 
+    The process of creating objects of a class is called instantiation.
+
+
+    Note that in computing objects aren't always representative of physical
+    items. For example, a programming object can represent a date, a time, and a bank account. 
+=end
