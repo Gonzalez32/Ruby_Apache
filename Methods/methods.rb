@@ -547,8 +547,37 @@ def fact(n)
     n * fact(n - 1)
 end
 
-puts fact(5)
+# puts fact(5)
+
 # outputs "stack level too deep (SystemStackError)"
 
 # Remember, an important key concept with recursion is to define and include the base case that makes the recursion stop.
 
+
+puts "*****"
+
+
+# quiz
+
+def demo(x)
+    x+=4
+    return x+2
+    x+=1
+end
+
+puts demo(2)
+# Here 2 is added by 4 = 6 and since the return statement is called here it is 6 + 2 = 8 
+# x+=1 is not being called because the return statement is called first and ends there.
+
+
+puts "%%%"
+
+
+# Quiz
+
+def x(y)
+    res = 0
+    (0..y).each {|z| res+=z}
+    res
+end
+puts x(3)
