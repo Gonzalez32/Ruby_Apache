@@ -457,3 +457,33 @@ puts $x
     anywhere in the code, but they can also be changed from anywhere in the application. 
     This can result in hard to find bugs.
 =end
+
+
+
+
+=begin
+    Variable Scope
+
+
+    So why does scope exist? Why couldn't all variables be accessible 
+    everywhere so we wouldn't have to care about their scope?
+    First of all, there are naming issues: if you have a big program, you'd have 
+    to give all of your variables unique names to avoid conflicts. 
+    Imagine keeping track of thousands of variable names.
+    Then, there are access issues: it's very hard to track who changes what when everyone has the ability to do so.
+    Scope makes the program more predictable and secure.
+
+
+    The other two types of scope in Ruby are instance and class. 
+    We will learn about them in the next module.
+=end
+
+# Quiz
+
+$x = 2
+def change(x)
+  $x = x
+end
+change(8)
+
+puts $x
