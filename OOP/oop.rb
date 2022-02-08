@@ -42,3 +42,21 @@ end
     These data members describe the attributes of the objects 
     (for example, a person can be 42 years old and male - these attributes are data members of the class Person).
 =end
+
+puts "====="
+
+# Classes
+
+=begin
+    There is a special initialize method available for classes which
+    gets called when an object is created.
+    It is defined inside a class just like any other class method:
+=end
+
+class Person
+    def initialize
+        puts "Hi There"
+    end
+end
+
+# The initialize method is known as the constructor in other object-oriented programming languages.
