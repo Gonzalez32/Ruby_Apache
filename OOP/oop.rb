@@ -164,4 +164,53 @@ a = Test.new 9
 
 # Instance Methods
 
+puts "===="
+
+=begin
+    In the real world, objects behave in their own way. A car moves, 
+    a phone rings, and so on.
+    The same applies to programming objects. Behavior is specific to 
+    the object's type and is defined by methods in the class.
+    You can declare instance methods that are available to an object 
+    of the class.
+
+    For example:
+=end
+
+class Dog
+    def bark
+        puts "Woof!"
+    end
+end
+
+=begin
+    We defined a method called bark that outputs text.
+    Now we can instantiate an object and call the method using the dot syntax:
+=end
+
+d = Dog.new
+d.bark
+
+# As with any methods, instance methods can inculde multiple parameters and return values.
+
+class box
+    def initialize(w, h)
+        @width = w
+        @height = h
+    end
+    
+    def area
+        @width * @height
+    end
+end
+
+
+# Instance Methods and Accessors
+
+=begin
+    An instance method can also be created to access the instance 
+    variables from outside of the object.
+    For example, if we want to access the @name instance variable 
+    for a Person object, we need a method that returns the value of that variable:
+=end
 
