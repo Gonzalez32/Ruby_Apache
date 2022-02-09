@@ -31,8 +31,8 @@
     For example:
 =end
 
-class Person
-end
+# class Person
+# end
 
 # The above code creates an empty class Person.
 
@@ -53,11 +53,11 @@ puts "====="
     It is defined inside a class just like any other class method:
 =end
 
-class Person
-    def initialize
-        puts "Hi There"
-    end
-end
+# class Person
+#     def initialize
+#         puts "Hi There"
+#     end
+# end
 
 # The initialize method is known as the constructor in other object-oriented programming languages.
 
@@ -72,14 +72,14 @@ end
     Below is an example that creates two objects p1 and p2 of the class Person:
 =end
 
-class Person
-    def initialize
-        puts "Hi there"
-    end
-end
+# class Person
+#     def initialize
+#         puts "Hi there"
+#     end
+# end
 
-p1 = Person.new
-p2 = Person.new
+# p1 = Person.new
+# p2 = Person.new
 
 =begin
     Note the syntax for calling new: the class name followed by a dot and followed by the method name.
@@ -92,4 +92,46 @@ p2 = Person.new
 
     Note that in computing objects aren't always representative of physical
     items. For example, a programming object can represent a date, a time, and a bank account. 
+=end
+
+
+# Instance Variables
+
+=begin
+    An instance variable is one type of variable defined in a class.
+    Each object of a class has a separate copy of the instance variables.
+    Instance variables are preceded by the at sign (@) followed by the variable name (for example: @name)
+    We can, for example, pass a parameter to the initialize method and assign it to an instance variable for a new object:
+=end
+
+class Person
+    def initialize(name)
+        @name = name
+    end
+end
+
+=begin
+    In the code above, @name is an instance variable for the class Person.
+    Now, we can create objects of that class and pass an argument to the new method:
+=end
+
+p1 = Person.new("David")
+p2 = Person.new("Amy")
+p3 = Person.new("Carlos")
+
+puts p1, p2, p3
+
+=begin
+    The object p1 now has an instance variable @name with the 
+    value "David" which relates only to the object p1.
+    Similarly, @name for the object p2 is equal to "Amy".
+    Each instance (object) of a class has its own unique instance 
+    variables that store values associated with that instance.
+
+
+    You might wonder why we don't use local variables instead 
+    of instance variables. We need instance variables 
+    because their scope is the entire object, meaning that they are 
+    accessible inside all the methods for the object, opposed to local variables,
+    which are accessible only within the scope they are declared, such as a single method.
 =end
