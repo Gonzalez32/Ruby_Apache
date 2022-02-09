@@ -115,11 +115,11 @@ end
     Now, we can create objects of that class and pass an argument to the new method:
 =end
 
-p1 = Person.new("David")
-p2 = Person.new("Amy")
-p3 = Person.new("Carlos")
+# p1 = Person.new("David")
+# p2 = Person.new("Amy")
+# p3 = Person.new("Carlos")
 
-puts p1, p2, p3
+# puts p1, p2, p3
 
 =begin
     The object p1 now has an instance variable @name with the 
@@ -135,3 +135,33 @@ puts p1, p2, p3
     accessible inside all the methods for the object, opposed to local variables,
     which are accessible only within the scope they are declared, such as a single method.
 =end
+
+# Instance Variables
+
+# A class can have multiple instance variables. For example:
+
+class Animal
+    @age = 0
+    def initialize(name, age)
+        @name = name
+        @age = age
+    end
+end
+
+object = Animal.new("Jacky", 4)
+
+# A class can have multiple instance variables.
+
+# quiz
+
+class Test
+    def initialize num
+      puts num%2
+    end
+end
+
+a = Test.new 9
+
+# Instance Methods
+
+
