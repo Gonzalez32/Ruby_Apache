@@ -104,11 +104,11 @@ puts "====="
     We can, for example, pass a parameter to the initialize method and assign it to an instance variable for a new object:
 =end
 
-class Person
-    def initialize(name)
-        @name = name
-    end
-end
+# class Person
+#     def initialize(name)
+#         @name = name
+#     end
+# end
 
 =begin
     In the code above, @name is an instance variable for the class Person.
@@ -193,16 +193,19 @@ d.bark
 
 # As with any methods, instance methods can inculde multiple parameters and return values.
 
-class box
-    def initialize(w, h)
-        @width = w
-        @height = h
-    end
+# What 
+# class box
+#     def initialize(w, h)
+#         @width = w
+#         @height = h
+#     end
     
-    def area
-        @width * @height
-    end
-end
+#     def area
+#         @width * @height
+#     end
+# end
+
+puts "---"
 
 
 # Instance Methods and Accessors
@@ -214,3 +217,25 @@ end
     for a Person object, we need a method that returns the value of that variable:
 =end
 
+class Person
+    def initialize name
+        @name = name
+    end
+    def get_name
+        @name
+    end
+end
+
+p = Person.new("David")
+puts p.get_name
+
+=begin
+    We created an instance method get_name that returns the value 
+    of the @name instance variable and then called it for our object p.
+
+    Getter and setter methods are called accessors.
+    The method that is used to retrieve the value of the variable is 
+    called a getter method (get_name in our example).
+    The method that is used to modify the value of the variable is 
+    called a setter method.
+=end    
