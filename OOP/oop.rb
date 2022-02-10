@@ -258,21 +258,21 @@ puts "----"
     For example:
 =end
 
-class Person
-    def initialize name
-        @name = name
-    end
-    def get_name
-        @name
-    end
-    def set_name=(name)
-        @name = name
-    end
-end
+# class Person
+#     def initialize name
+#         @name = name
+#     end
+#     def get_name
+#         @name
+#     end
+#     def set_name=(name)
+#         @name = name
+#     end
+# end
 
-p = Person.new("David")
-p.set_name = "Bob"
-puts p.get_name
+# p = Person.new("David")
+# p.set_name = "Bob"
+# puts p.get_name
 
 =begin
     In the code above, set_name is a setter method that sets the 
@@ -311,21 +311,21 @@ puts p.get_name
     The previous example can be rewritten as:
 =end
 
-class Person
-    def intitialize(name)
-        @name = name
-    end
-    def name
-        @name
-    end
-    def name=(name)
-        @name = name
-    end
-end
+# class Person
+#     def intitialize(name)
+#         @name = name
+#     end
+#     def name
+#         @name
+#     end
+#     def name=(name)
+#         @name = name
+#     end
+# end
 
-p = Person.new("David")
-p.name = "Boob"
-puts p.name
+# p = Person.new("David")
+# p.name = "Boob"
+# puts p.name
 
 
 puts "----"
@@ -343,18 +343,18 @@ puts "----"
     We can do the following:
 =end
 
-class Person
+# class Person
 
-    attr_accessor :name
+#     attr_accessor :name
 
-    def initialize(name)
-        @name = name
-    end
-end
+#     def initialize(name)
+#         @name = name
+#     end
+# end
 
-p = Person.new("David")
-p.name = "BOB"
-puts p.name
+# p = Person.new("David")
+# p.name = "BOB"
+# puts p.name
 
 =begin
     That one line replaced two accessor method definitions.
@@ -365,4 +365,41 @@ puts p.name
     attr_accessor, attr_reader and attr_writer methods. 
     
     For example: attr_accessor :name, :height, :weight
+=end
+
+# Accessors
+
+# The accessor methods can be called inside the class by using the self keyword.
+# For example:
+
+class Person
+    attr_accessor :name, :age
+    def initialize(name, age)
+        @name = name
+        @age = age
+    end
+    def change(n, a)
+        self.name = n
+        self.age = a
+    end
+    def show_info
+        puts "#{self.name} is #{self.age}"
+    end
+end
+
+p = Person.new("David", 30)
+p.change("Juan", 28)
+p.show_info
+
+=begin
+    In the code above, we define a method called change that changes the 
+    instance variables via their accessor methods. The show_info method 
+    outputs the values of the instance variables.
+    
+    
+    self represents the current object and is used to call the instance 
+    methods and accessors of the object.
+    One of the benefits of using self is for disambiguation. 
+    For example, if you have a variable and a method both called name, 
+    self.name would make it clear that you are referring to the method.
 =end
