@@ -293,13 +293,37 @@ puts p.get_name
 # Quiz 
 # Setter Methods
 
-class Dog
-    def set_age = (age)
-        @age = age
-    end
-end
+# class Dog
+#     def set_age=(age)
+#         @age = age
+#     end
+# end
 
 # valid setter method for the "age" instance variable.
 
 
+# Accessors
+
+=begin
+    In Ruby it is a common practice to name the getter and 
+    setter methods using the same name as the instance variable 
+    they are accessing.
+    The previous example can be rewritten as:
+=end
+
+class Person
+    def intitialize(name)
+        @name = name
+    end
+    def name
+        @name
+    end
+    def name=(name)
+        @name = name
+    end
+end
+
+p = Person.new("David")
+p.name = "Boob"
+puts p.name
 
