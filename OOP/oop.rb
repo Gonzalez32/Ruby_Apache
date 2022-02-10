@@ -290,4 +290,16 @@ puts p.get_name
     called set_name= working behind the scenes.
 =end
 
+# Quiz 
+# Setter Methods
+
+class Dog
+    def set_age = (age)
+        @age = age
+    end
+end
+
+# valid setter method for the "age" instance variable.
+
+
 
