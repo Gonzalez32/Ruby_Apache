@@ -431,3 +431,43 @@ end
 
 Person.info
 
+puts "@@@@@"
+
+=begin
+    Class variables are accessible to every object of a class. 
+    A class variable belongs to the class, not the objects.
+    You declare a class variable using two @ signs, for example @@name.
+    We can, for example, keep count of all Person objects created using a 
+    class variable:
+=end
+
+class Person
+    @@count = 0
+    def initialize
+        @@count += 1
+    end
+    def self.get_count
+        @@count
+    end
+end
+
+p1 = Person.new
+p2 = Person.new
+
+puts Person.get_count
+
+=begin
+    In the code above, @@count is a class variable. Since the initialize 
+    method is called for every object that is created, incrementing the 
+    @@count variable will keep track of the number of objects created.
+    We also defined a class method called get_count to return the value 
+    of the class variable.
+    In the code above, we have created two objects of the Person class 
+    so the value of the @@count variable is 2.
+    
+    
+    Class variables are usually used when you need information about 
+    the class, not the individual objects.
+=end
+
+puts "@@@@@"
