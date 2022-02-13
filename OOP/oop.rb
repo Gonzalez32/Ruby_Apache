@@ -552,10 +552,43 @@ puts "%%%%%%"
     For example:
 =end
 
-class Dog < Animal
-    # some code
-end
+# class Dog < Animal
+#     # some code
+# end
 
 # In the code above, Dog is the subclass and Animal in the superclass.
 
 
+puts "---"
+
+# Inheritance
+
+# Now, lets define the Animal and Dog classes:
+
+class Animal
+
+    def initialize(name, color)
+        @name = name
+        @color = color
+    end
+
+    def speak
+        puts "HOLA"
+    end
+end
+
+class Dog < Animal
+end
+
+=begin
+    Dog is a subclass of Animal so it inherits Animal's methods and attributes, 
+    making code like this possible:
+=end
+
+d = Dog.new("Bobby", "brown")
+d.speak
+
+=begin
+    Now Dog has all the methods and attributes of the Animal class, 
+    which is why we can instantiate the object and call the speak method.
+=end
