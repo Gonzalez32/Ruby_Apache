@@ -565,6 +565,39 @@ puts "---"
 
 # Now, lets define the Animal and Dog classes:
 
+# class Animal
+
+#     def initialize(name, color)
+#         @name = name
+#         @color = color
+#     end
+
+#     def speak
+#         puts "HOLA"
+#     end
+# end
+
+# class Dog < Animal
+# end
+
+=begin
+    Dog is a subclass of Animal so it inherits Animal's methods and attributes, 
+    making code like this possible:
+=end
+
+# d = Dog.new("Bobby", "brown")
+# d.speak
+
+=begin
+    Now Dog has all the methods and attributes of the Animal class, 
+    which is why we can instantiate the object and call the speak method.
+=end
+
+
+# Inheritance
+
+# The subclass can also have its own mehtods and attributes. Let's define a Cat class and inherit it from the same Animal class.
+
 class Animal
 
     def initialize(name, color)
@@ -577,18 +610,30 @@ class Animal
     end
 end
 
-class Dog < Animal
+# class Dog < Animal
+# end
+
+class Cat < Animal
+    attr_accessor :age
+    
+    def speak
+        puts "Meow bitch!"
+    end
 end
 
-=begin
-    Dog is a subclass of Animal so it inherits Animal's methods and attributes, 
-    making code like this possible:
-=end
-
-d = Dog.new("Bobby", "brown")
-d.speak
+c = Cat.new("Lucy", "white")
+c.age = 2
+c.speak
 
 =begin
-    Now Dog has all the methods and attributes of the Animal class, 
-    which is why we can instantiate the object and call the speak method.
+    In the code above, Cat inherits from Animal. 
+    It has an instance variable age and also defines its own speak method. 
+    This is called method overriding, because the speak method in Cat overrides, 
+    or replaces, the one in the Animal class.
+
+    When we called the speak method for our Dog object, its superclass method was 
+    called because Dog did not override it.
+    The Cat object called its own speak method, because it defined its own 
+    implementation.
 =end
+
