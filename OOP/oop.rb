@@ -490,3 +490,20 @@ puts Calc::PI
 
 puts "********"
 
+# The to_s Method
+
+# to_s method comes built-in with all classes. It gets called when you output the object.
+# For example:
+
+class Person
+    # some code
+end
+p = Person.new
+puts p
+
+=begin
+    When we call puts p, Ruby automatically calls the to_s method for the object p, so puts p is the same as puts p.to_s
+
+    By default, the to_s method prints the object's class and an encoding of the object id.
+=end
+
