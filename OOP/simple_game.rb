@@ -10,10 +10,10 @@
 
 class Player
     attr_accessor :name, :health, :power
-    def initialize(n, h, pow)
-        @name = n
-        @health = h
-        @power = pow
+    def initialize(name, health, power)
+        @name = name
+        @health = health
+        @power = power
     end
     def isAlive
         @health > 0
