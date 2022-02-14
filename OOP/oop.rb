@@ -617,7 +617,7 @@ class Cat < Animal
     attr_accessor :age
     
     def speak
-        puts "Meow bitch!"
+        puts "Meow! >.<"
     end
 end
 
@@ -663,4 +663,49 @@ puts "===="
     However, Ruby does not support multiple inheritance, meaning you cannot inherit 
     a class simultaneously from multiple classes. (A class cannot have multiple superclasses)
     To achieve that behavior, Ruby supports mixins. We will learn about them in the next module.
+=end
+
+
+
+# Super
+
+=begin
+    Ruby has a built-in method called super, which is used to call methods from the superclass.
+    When you call super in a method of the subclass, the method of the same name gets called from the superclass.
+    For example:
+=end
+
+class Animal
+    def speak
+        puts "HOLA"
+    end
+end
+
+class Cato < Animal
+    def speak
+        super
+        puts "MEOW"
+    end
+end
+
+=begin
+    super calls the speak method of the Animal class.
+    Now, if we create an object of class Cat and call 
+    its speak method, we will get the following:
+=end
+
+p = Cato.new
+p.speak
+
+=begin
+    The use of super allows us to remove duplicate code by 
+    using and extending the behavior of the superclass in our subclasses.
+=end
+
+# Super
+
+=begin
+    super is more commonly used in the initialize method.
+    For example, our superclass has a initialize method that 
+    takes one argument and initializes an instance variable:  
 =end
