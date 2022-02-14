@@ -497,11 +497,11 @@ puts "********"
 # to_s method comes built-in with all classes. It gets called when you output the object.
 # For example:
 
-class Person
-    # some code
-end
-p = Person.new
-puts p
+# class Person
+#     # some code
+# end
+# p = Person.new
+# puts p
 
 =begin
     When we call puts p, Ruby automatically calls the to_s method for the object p, so puts p is the same as puts p.to_s
@@ -675,27 +675,27 @@ puts "===="
     For example:
 =end
 
-class Animal
-    def speak
-        puts "HOLA"
-    end
-end
+# class Animal
+#     def speak
+#         puts "HOLA"
+#     end
+# end
 
-class Cato < Animal
-    def speak
-        super
-        puts "MEOW"
-    end
-end
+# class Cato < Animal
+#     def speak
+#         super
+#         puts "MEOW"
+#     end
+# end
 
-=begin
-    super calls the speak method of the Animal class.
-    Now, if we create an object of class Cat and call 
-    its speak method, we will get the following:
-=end
+# =begin
+#     super calls the speak method of the Animal class.
+#     Now, if we create an object of class Cat and call 
+#     its speak method, we will get the following:
+# =end
 
-p = Cato.new
-p.speak
+# p = Cato.new
+# p.speak
 
 =begin
     The use of super allows us to remove duplicate code by 
@@ -709,3 +709,44 @@ p.speak
     For example, our superclass has a initialize method that 
     takes one argument and initializes an instance variable:  
 =end
+
+class Animal
+    def initialize(name)
+        @name = name
+    end
+end
+
+=begin
+    Now, we need a subclass Cat that also has an @age instance variable, and 
+    we need to define its own initialize method. Instead of repeating ourselves, 
+    and setting the name instance variable in the Cat class, 
+    we can use its superclass with the super method as follows:
+=end
+
+class Cat < Animal
+    def initialize(name, age)
+        super(name)
+        @age = age
+    end
+    def to_s
+        "#{@name} is #{@age} years old."
+    end
+end
+
+=begin
+    We passed one of the arguments to the super method, which calls the 
+    initialize method of the Animal class and sets the @name instance variable.
+    Now we can instantiate an object and output its info:
+=end
+
+c = Cat.new("Bob", 3)
+puts c
+
+=begin
+    In the example we used super for a simple assignment. 
+    Imagine having a complex program with complex calculations and 
+    operations being carried out. That's where the real benefits 
+    of "not repeating yourself" come in, and calling the super where 
+    applicable is one way of achieving it.
+=end
+
