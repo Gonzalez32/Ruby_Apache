@@ -72,3 +72,14 @@ end
     we check and output the corresponding result.
 =end
 
+
+# A Simple Game
+
+a, b = 8, 3
+while a > 2
+  a -= b
+end
+puts a
+# Output is 2
+
+
