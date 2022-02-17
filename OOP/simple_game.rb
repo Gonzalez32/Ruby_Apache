@@ -74,6 +74,7 @@ end
 
 
 # A Simple Game
+# Quiz Statement
 
 a, b = 8, 3
 while a > 2
@@ -81,5 +82,25 @@ while a > 2
 end
 puts a
 # Output is 2
+
+
+puts "----"
+
+
+=begin
+    All that is left is to create two Player objects and call the fight method. 
+    To make the game interesting, we can use random values for health and power 
+    of our players using the rand method, which returns a random value in the 
+    range of 0 to its argument.
+=end
+
+p1 = Player.new("Player 1", 1 + rand(100), 1 + rand(20))
+p2 = Player.new("Player 2", 1 + rand(100), 1 + rand(20))
+
+# Show Player Info
+show_info(p1, p2)
+
+puts "=--=  LETS FIGHT! =--="
+fight(p1, p2)
 
 
