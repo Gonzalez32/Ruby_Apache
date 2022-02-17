@@ -166,4 +166,33 @@ show_info(p1, p2)
 puts "=--=  LETS FIGHT! =--="
 fight(p1, p2)
 
-# 
+# Quiz - 1
+
+# What is the output of this code?
+
+class A
+    @num = 8
+    def show
+        puts @num
+    end
+end
+
+class B < A
+    def initialize
+        @num = 2
+    end
+end
+
+ob = B.new
+ob.show
+
+# Output will be: 2
+
+# Quiz - 2
+
+# To make a method of a class accessible from outside the class, it should be:
+
+# Answer is: public
+
+# Quiz - 3 
+
