@@ -94,8 +94,71 @@ puts "----"
     range of 0 to its argument.
 =end
 
-p1 = Player.new("Player 1", 1 + rand(100), 1 + rand(20))
-p2 = Player.new("Player 2", 1 + rand(100), 1 + rand(20))
+# p1 = Player.new("Player 1", 1 + rand(100), 1 + rand(20))
+# p2 = Player.new("Player 2", 1 + rand(100), 1 + rand(20))
+
+# # Show Player Info
+# show_info(p1, p2)
+
+# puts "=--=  LETS FIGHT! =--="
+# fight(p1, p2)
+
+=begin
+    We used 100 as the maximum value for health, and 20 as a maximum value for power. 
+    We add 1 to the rand method to avoid the value 0.
+    Now, each time you run the program, two Players with random health and power will 
+    be created and will fight!
+    The final code:
+=end
+
+class Player
+    attr_accessor :name, :health, :power
+    
+    def initialize(name, health, power)
+        @name = name
+        @health = health
+        @power = power
+    end
+
+    def isAlive
+        @health > 0
+    end
+
+    def hit(opponent)
+        opponent.health -= self.power
+    end
+
+    def to_s
+        ").( Name: #{name}, Health: #{health}, Power: #{power} "
+    end
+end
+
+def fight(p1, p2)
+
+    while p1.isAlive && p2.isAlive
+        p1.hit(p2)
+        p2.hit(p1)
+        show_info(p1, p2)
+    end
+
+    if p1.isAlive
+        puts "%@-@% YAY! #{p1.name} WON! %@-@%"
+    elsif p2.isAlive
+        puts "%@-@% #YAY! {p2.name} WON! %@-@%"
+    else
+        puts "=~~= TIE! =~~="
+    end
+
+    def show_info(*p)
+        p.each { |player_info| puts player_info}
+    end
+
+end
+
+# Initialize Players
+puts "*===* PLAYERS INFO *===*"
+p1 = Player.new("Player 1", 1+rand(100), 1+rand(20))
+p2 = Player.new("Player 2", 1+rand(100), 1+rand(20))
 
 # Show Player Info
 show_info(p1, p2)
@@ -103,4 +166,4 @@ show_info(p1, p2)
 puts "=--=  LETS FIGHT! =--="
 fight(p1, p2)
 
-
+# 
