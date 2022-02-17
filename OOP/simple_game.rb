@@ -166,6 +166,10 @@ show_info(p1, p2)
 puts "=--=  LETS FIGHT! =--="
 fight(p1, p2)
 
+
+puts "======"
+
+
 # Quiz - 1
 
 # What is the output of this code?
@@ -195,4 +199,10 @@ ob.show
 # Answer is: public
 
 # Quiz - 3 
+
+# Instantiate an object of the class Person, passing the value 42 to it. 
+# Then call the "speak" method for that object.
+
+# ob = Person.new(42)
+# ob.speak
 
