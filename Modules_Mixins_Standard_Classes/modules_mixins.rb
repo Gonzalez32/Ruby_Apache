@@ -68,3 +68,30 @@ ob.fly
     Not all modules are named in this manner, however, it is quite common.
 =end
 
+puts "0000000"
+
+=begin
+    As you may recall, Ruby does not allow a class to inherit from multiple classes.
+    However, a class can mix in multiple modules. Modules used this way are known as "mixins".
+    So, basically, a class can have multiple mixins:
+
+    class Human
+    include Walkable
+    include Speakable
+    include Runnable
+    end
+    
+    It is important to remember the following:
+    1. You can only inherit from one class. But you can mix in as many modules as you'd like.
+
+    2. If it's an "is-a" relationship, choose class inheritance. 
+    If it's a "has-a" relationship, choose modules. Example: a plane "is a" vehicle; a plane "has an" ability to fly.
+
+    3. You cannot instantiate modules (i.e., an object cannot be created from a module).
+    Modules are used only for grouping common methods together.
+    Classes are about objects; modules are about methods.
+    
+    
+    Mixins give you a great, controlled way of adding functionality to classes.
+=end
+
