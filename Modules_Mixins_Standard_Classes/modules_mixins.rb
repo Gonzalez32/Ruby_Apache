@@ -21,3 +21,50 @@ end
 # A module called Flyable, which includes one method called fly.
 # A module can include as many methods as you want.
 
+
+# Modules
+
+
+=begin
+    Now, imagine having a class hierarchy, with a superclass Vehicle and subclasses: 
+    Car, Jet, Plane.
+    All have some shared functionality, which they inherit from the Vehicle class, 
+    but only Jet and Plane can fly.
+    Instead of defining separate fly methods for both classes, 
+    we can define a module and include it (commonly referred to as "mix" it) in the classes.
+=end
+
+module Flyable
+    def fly
+        puts "I'm Flying!!!"
+    end
+end
+
+class Vehicle
+
+end
+
+class Car < Vehicle
+
+end
+
+class Jet < Vehicle
+include Flyable
+end
+
+class Plane < Vehicle
+include Flyable
+end
+
+# Now Jet and Plane objects can fly, but objects of other classes won't be able to:
+
+ob = Jet.new
+
+ob.fly
+
+=begin
+    A common naming convention for Ruby is to use the "able" suffix on whatever verb 
+    describes the behavior that the module is modeling, like Walkable, Swimmable, Runnable, etc.
+    Not all modules are named in this manner, however, it is quite common.
+=end
+
