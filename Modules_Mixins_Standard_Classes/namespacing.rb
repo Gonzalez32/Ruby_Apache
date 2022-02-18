@@ -34,3 +34,10 @@ b = Mammal::Cat.new
 a.speak
 b.speak
 
+=begin
+    The advantages of namespacing classes:
+    becomes easy for us to recognize related classes in our code.
+    It reduces the likelihood of our classes colliding with other 
+    similarly named classes in our code. We can have the same class names 
+    across different modules.
+=end
