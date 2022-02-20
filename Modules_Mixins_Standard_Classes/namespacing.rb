@@ -91,3 +91,41 @@ b.speak
     named classes in our code. We can have the same class names across different modules.
 =end
 
+
+puts "''''''''''"
+
+
+# Namespacing
+
+=begin
+    Another use for modules is as containers for methods.
+    This allows us to group together relevant methods and use them in our code.
+    For example:
+=end
+
+module MyMath
+    PI = 3.14
+
+    def self.spuare(x)
+        x*x
+    end
+    
+    def self.factorial(x)
+        (1..x).inject(:*) || 1
+    end
+end
+
+puts MyMath.factorial(8)
+
+=begin
+    The code above defines a module called MyMath, which includes a constant called PI, 
+    and three class methods. The methods inside a module are defined as class methods 
+    (note the self keyword), and we call them using the dot syntax.
+    You can call the methods using two colon syntax (::) as well (MyMath::factorial(8)), 
+    but the dot syntax is preferred.
+
+
+    Again, the advantages of using modules to group methods includes preventing name 
+    collisions, meaning that we can have the same method names across multiple modules.
+=end
+
