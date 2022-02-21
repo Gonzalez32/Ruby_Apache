@@ -53,3 +53,20 @@ puts person.salary
 # OStruct isn't as fast as Struct! But it is more FLEXIBLE.
 
 
+puts "++++"
+
+
+# Ostruct
+
+# We can also initialize an OStruct using a hash. For Ex...
+
+require "ostruct"
+
+person = OpenStruct.new(name:"Juan", age:28, salary:300)
+
+puts person.name
+
+
+# Struct and OStruct provide a simple way to create data structures that have the behavior of a class.
+
+
