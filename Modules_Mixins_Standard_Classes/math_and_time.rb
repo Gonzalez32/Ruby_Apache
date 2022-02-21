@@ -22,5 +22,27 @@ puts Math::cos(0)
 
 puts "------"
 
-# Run the code and see how it work!
 
+# current time
+t = Time.now
+puts t
+
+puts "======"
+# year, month, day
+puts t.year
+puts t.month
+puts t.day
+
+puts "======"
+# custom date
+t = Time.new(1988, 6, 10)
+
+puts "======"
+# day of week: 0 is sunday
+puts t.wday
+
+puts "======"
+# day of year
+puts t.yday
+
+puts "======"
