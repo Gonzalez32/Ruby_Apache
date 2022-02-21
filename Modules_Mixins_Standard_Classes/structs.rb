@@ -25,3 +25,31 @@ puts dest.y
 # Struct is a built-in Ruby class and makes it shorter to define simple classes, accessors, and their initialize methods.
 
 
+puts "-----"
+
+
+# OStruct
+
+=begin
+    OpenStruct (or OStruct) acts very similarly to Struct, except that it doesn't 
+    have a defined list of attributes.
+    To use OStruct, we need to include the corresponding library using the 
+    require statement.
+=end
+
+require "ostruct"
+
+person = OpenStruct.new
+person.name = "Juancho dezz nutzzz"
+person.age = 100
+person.salary = 500
+
+puts person.name
+puts person.age
+puts person.salary
+
+# As you can see, we can define any number of attributes on the fly.
+
+# OStruct isn't as fast as Struct! But it is more FLEXIBLE.
+
+
