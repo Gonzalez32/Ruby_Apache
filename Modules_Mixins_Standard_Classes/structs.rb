@@ -21,3 +21,7 @@ origin = Point.new(0, 0)
 dest = Point.new(15, 42)
 
 puts dest.y
+
+# Struct is a built-in Ruby class and makes it shorter to define simple classes, accessors, and their initialize methods.
+
+
