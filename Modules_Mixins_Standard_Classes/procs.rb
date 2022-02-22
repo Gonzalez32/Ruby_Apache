@@ -65,3 +65,33 @@ say(people, goodbye)
     than one place without having to type them out every time. Procs basically take 
     blocks of code and embed them in an object, allowing them to be reused and passed around.
 =end
+
+
+puts "====="
+
+
+# Procs
+
+=begin
+    Let's create a program that counts the execution time of a block of code.
+    We will define a method that takes a proc as its parameter and counts the 
+    time it takes to execute the proc.
+=end
+
+def calc(proc)
+    start = Time.now
+    proc.call
+    dur = Time.now - start
+end
+
+someProc = Proc.new do
+    num = 0
+    1000000.times do
+        num = num + 1
+    end 
+end
+
+puts calc(someProc)
+
+# With that tiny calc method, we can now easily calculate the execution time of any Ruby code!
+
