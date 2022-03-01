@@ -70,3 +70,10 @@ talk_proc.call "Bob"
 
 
 
+# Quiz
+
+# What is the output of this code?
+a = lambda{ |x, y| x / y }
+puts a.call 7, 2
+
+# output is 3 
