@@ -17,3 +17,14 @@ talk.call
 
 # In other programming languages, a lamdba is commonly referred to as an anonymous funciton.
 
+puts "===="
+
+
+# What is the output of this code?
+
+a = lambda{|x| x * 3}
+puts a.call 6
+
+# Output: will be 18
+# 6 * 3 = 18
+
