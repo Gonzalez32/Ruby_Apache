@@ -44,3 +44,52 @@ file.close
 file = File.open("filename", "w+")
 
 # As with the new method, the second argument of the open method specifies the mode.
+
+
+puts "===="
+
+
+# Writing Files
+
+=begin
+    The puts and write methods can be used for writing content to a file.
+    The difference between the two is that puts adds a line break to the end of strings, 
+    while write does not.
+    For example:
+=end
+
+file = file.new("test.txt", "w+")
+file.puts("some text")
+file.close
+
+# Remember to close the file after performing the file operations.
+
+
+=begin
+    If we want to write to an existing file, we can use a block of code to perform 
+    the write operation.
+    With this code Ruby will automatically close the file.
+    For example:
+=end
+
+File.open("file.txt", "w+") {
+    |file| file.puts("some text")
+}
+
+# This shorter way makes sure the file closes at the end of the block.
+
+
+# Reading Files
+
+# To read the entire contents of a file the File.read method can be used. 
+# For Ex:
+
+f = File.new("test.txt", "w+")
+f.puts("a line of text")
+f.puts("another line of text")
+f.close
+
+puts File.read("test.txt")
+
+
+
