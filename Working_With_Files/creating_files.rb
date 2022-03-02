@@ -142,3 +142,38 @@ puts "==="
     File.file? returns true if the file exists, and false if it does not.
 =end
 
+
+
+# File Info
+
+=begin
+    Ruby provides some useful methods to get relevant information about a file.
+    The size method returns the size of the file.
+    The zero? method returns true if the named file exists and has a zero size (is empty).
+    For example:
+=end
+
+# Create a file
+
+f = File.new("test.txt", "w+")
+f.puts("some file content")
+
+puts f.size # 19
+
+f.close
+
+puts File.zero?("test.txt") # false
+
+
+# File Info
+
+# We can also check whether the file is writable, readable or executable:
+
+f = File.new("test.txt", "w+")
+f.puts("some content")
+f.close
+
+puts File.readable?("text.txt")
+puts File.writable?("test.txt")
+puts File.executable?("test.txt")
+
