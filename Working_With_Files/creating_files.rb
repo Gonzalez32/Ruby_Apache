@@ -107,3 +107,38 @@ File.readlines("test.txt").each {
     |line| puts "--- #{line}"
 }
 
+=begin
+    The readlines method reads the entire file based on individual 
+    lines and returns those lines in an array.
+=end
+
+
+
+puts "==="
+
+
+
+# Deleting Files
+
+# we can delete a file using the File.delete method.
+# For Ex:
+
+# File.delete("test.txt")
+
+# Be careful, as this command deletes the file permanently.
+
+
+
+=begin
+    When working with files, it is important to first check if the file exists in 
+    order to prevent an error.
+    The file? method provides an easy way of checking if the file exists.
+    For example:
+
+        File.open("test.txt") if File.file?("text.txt")
+    
+    The code above tests whether a file exists before opening it.
+
+    File.file? returns true if the file exists, and false if it does not.
+=end
+
