@@ -98,14 +98,14 @@
 # We can also read the file contents line-by-line using the readlines mehtod.
 # for Ex:
 
-File.open("test.txt", "a+") {
-    |x| x.puts("a line of text")
-    x.puts("another line of text!")
-}
+# File.open("test.txt", "a+") {
+#     |x| x.puts("a line of text")
+#     x.puts("another line of text!")
+# }
 
-File.readlines("test.txt").each {
-    |line| puts "--- #{line}"
-}
+# File.readlines("test.txt").each {
+#     |line| puts "--- #{line}"
+# }
 
 =begin
     The readlines method reads the entire file based on individual 
@@ -155,25 +155,33 @@ puts "==="
 
 # Create a file
 
-f = File.new("test.txt", "w+")
-f.puts("some file content")
+# f = File.new("test.txt", "w+")
+# f.puts("some file content")
 
-puts f.size # 19
+# puts f.size # 19
 
-f.close
+# f.close
 
-puts File.zero?("test.txt") # false
+# puts File.zero?("test.txt") # false
 
 
 # File Info
 
 # We can also check whether the file is writable, readable or executable:
 
-f = File.new("test.txt", "w+")
-f.puts("some content")
+# f = File.new("test.txt", "w+")
+# f.puts("some content")
+# f.close
+
+# puts File.readable?("text.txt")
+# puts File.writable?("test.txt")
+# puts File.executable?("test.txt")
+
+
+f = File.new("sample.txt", "w+")
+f.write("start")
+14.times do
+  f.puts("hi")
+end
+f.write("end")
 f.close
-
-puts File.readable?("text.txt")
-puts File.writable?("test.txt")
-puts File.executable?("test.txt")
-
